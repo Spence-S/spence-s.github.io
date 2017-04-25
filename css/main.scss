@@ -6,14 +6,17 @@
 
 // cool fonts
 @import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
 // custom variables
+
 $robofont: 'VT323', monospace;
+$terminalfont: 'PT Mono', monospace;
 $creamwhite: #F1D4AF;
 
 
 //custom classes
-.robofont{ font-family: $robofont; }
+.robofont{ font-family: $terminalfont; font-size: 4rem}
 .bg-cream{background-color: $creamwhite; }
 
 
@@ -24,4 +27,20 @@ $creamwhite: #F1D4AF;
 .main-image{
     height: 300px;
     width: 100%;
+}
+
+.terminal-top{
+  background-color: $gray;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  padding-top: 1rem;
+}
+.terminal{
+  background-color: $gray-lighter;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 1px 0px 1px;
+  padding: 1rem;
 }

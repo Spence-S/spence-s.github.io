@@ -7,34 +7,36 @@
         <!-- Page Title, Duh-->
         <title>{{ page.title }}</title>
         <!-- Bootstrap css minified blah blah -->
-        <link rel='stylesheet' href='css/main.css' />
+        <link rel='stylesheet' href='/css/main.css' />
         <link rel='styleseet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'  />
     </head>
     <body>
-        <div class="container-fluid">
-            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="container-fluid">
+        <div>
+           <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="https://github.com/Spence-S/"><img src="https://avatars3.githubusercontent.com/u/16724951?v=3&u=98ad276b5caa576e54060053c08b6d0d9990988e&s=400" class="gravatarish"  /></a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">About</a>
-                        <a class="nav-item nav-link" href="#">Blog</a>
-                        <a class="nav-item nav-link" href="#">Portfolio</a>
-                        <a class="nav-item nav-link" href="#">Teaching</a>
+                        <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="/about">About</a>
+                        <a class="nav-item nav-link" href="/blog">Blog</a>
+                        <a class="nav-item nav-link" href="/portfolio">Portfolio</a>
+                        <a class="nav-item nav-link" href="/teaching">Teaching</a>
                     </div>
-                <div>
+                </div>
             </nav>
         </div>
         <div class="bg-faded robofont">
-          <div class="row">
-            <div class="col-12">
-              <h1 id="typertext"></h1>
+          <div class="terminal-top"></div>
+          </div>
+            <div class="terminal">
+              <h2 id="fintext" class="text-left text-primary text-nowrap"> ~ $: <span id="typertext"></span><span id="cursor">_</span></h2>
             </div>
           </div>
-        </div>
+
         <div class="container-fluid">
              {{ content }}
          </div><!-- /.container -->
@@ -47,35 +49,20 @@
             function typer(){
                $("#typertext")
                 .typed({
-                   strings: [`/~ $:cd /spencer${path}`, ],
+                   strings: [`cd /spencer${path} ^400` ],
                    typeSpeed: 70,
-                   fadeOut: true,
-                   fadeOutClass: 'invisible',
- 	                 fadeOutSpeed: 5,
                    showCursor: false,
-                   callback: () => {$('#typertext').text(`/~/spencer${path} $:`);}
+                   callback: () => {
+                      $('#fintext').html(`<h2 class="text-left text-primary text-nowrap">~/spencer${path} $: <span id="cursor">_</span></h2>`);
+                     }
                  });
             };
             window.onload = typer;
+            //cursor blink effect
 
+            setInterval(() => {
+              $('#cursor').toggleClass("invisible")
+            }, 800)
          </script>
-
-
-         <!-- <script src="javascript/typed.js"></script>
-         <script>
-           function typer(){
-              $("#typertext")
-               .typed({
-                  strings: ["/~ $:cd /spencer/homepage", "/~/spencer/homepage"],
-                  typeSpeed: 70,
-                  fadeOut: true,
-                  fadeOutClass: 'invisible',
-	                fadeOutSpeed: 5,
-                });
-           };
-           window.onload = typer;
-         </script> -->
-
-
     </body>
 </html>
