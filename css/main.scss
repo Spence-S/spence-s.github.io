@@ -1,0 +1,27 @@
+---
+#jekyll front matter
+---
+// import bootstrap
+@import "bootstrap";
+
+// cool fonts
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+// custom variables
+$robofont: 'VT323', monospace;
+$creamwhite: #F1D4AF;
+
+
+//custom classes
+.robofont{ font-family: $robofont; }
+.bg-cream{background-color: $creamwhite; }
+
+
+.gravatarish{
+    height:40px;
+    width:40px;
+}
+.main-image{
+    height: 300px;
+    width: 100%;
+}

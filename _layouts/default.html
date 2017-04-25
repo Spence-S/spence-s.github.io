@@ -1,40 +1,81 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-		    	<!-- Required meta tags -->
-		    	<meta charset="utf-8">
-		    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-			
-			<!-- Page Title, Duh-->
-			<title>{{ page.title }}</title>
-			
-			<!-- Bootstrap css minified blah blah -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-			
-			<!-- <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
-		</head>
-		<body>
-			<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-			  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
-			  </button>
-			  <a class="navbar-brand" href="https://github.com/Spence-S/">Spence-S</a>
-			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			    <div class="navbar-nav">
-			      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-			      <a class="nav-item nav-link" href="#">About</a>
-			      <a class="nav-item nav-link" href="#">Blog</a>
-			      <a class="nav-item nav-link" href="#">Cool Shtuff</a>
-			    </div>
-			  </div>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-		</body>
-	</html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Page Title, Duh-->
+        <title>{{ page.title }}</title>
+        <!-- Bootstrap css minified blah blah -->
+        <link rel='stylesheet' href='css/main.css' />
+        <link rel='styleseet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'  />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="https://github.com/Spence-S/"><img src="https://avatars3.githubusercontent.com/u/16724951?v=3&u=98ad276b5caa576e54060053c08b6d0d9990988e&s=400" class="gravatarish"  /></a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#">About</a>
+                        <a class="nav-item nav-link" href="#">Blog</a>
+                        <a class="nav-item nav-link" href="#">Portfolio</a>
+                        <a class="nav-item nav-link" href="#">Teaching</a>
+                    </div>
+                <div>
+            </nav>
+        </div>
+        <div class="bg-faded robofont">
+          <div class="row">
+            <div class="col-12">
+              <h1 id="typertext"></h1>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+             {{ content }}
+         </div><!-- /.container -->
+         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+         <script src="/javascript/typed.js"></script>
+         <script>
+            const path=window.location.pathname; // returns the page name
+            function typer(){
+               $("#typertext")
+                .typed({
+                   strings: [`/~ $:cd /spencer${path}`, ],
+                   typeSpeed: 70,
+                   fadeOut: true,
+                   fadeOutClass: 'invisible',
+ 	                 fadeOutSpeed: 5,
+                   showCursor: false,
+                   callback: () => {$('#typertext').text(`/~/spencer${path} $:`);}
+                 });
+            };
+            window.onload = typer;
+
+         </script>
+
+
+         <!-- <script src="javascript/typed.js"></script>
+         <script>
+           function typer(){
+              $("#typertext")
+               .typed({
+                  strings: ["/~ $:cd /spencer/homepage", "/~/spencer/homepage"],
+                  typeSpeed: 70,
+                  fadeOut: true,
+                  fadeOutClass: 'invisible',
+	                fadeOutSpeed: 5,
+                });
+           };
+           window.onload = typer;
+         </script> -->
+
+
+    </body>
+</html>
