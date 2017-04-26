@@ -1,4 +1,25 @@
 ---
 layout: default
-title: portfolio
+title: Portfolio
 ---
+<div class="row">
+  <!-- 8 columns for desk top, TODO:seperate mobile layout -->
+  <div class="col">
+    <h1>{{ page.title }} </h1>
+  </div>
+</div>
+<div class="card-deck" >
+  {% for project in site.projects  %}
+  <div class="col-sm-12 col-md-6 col-lg-4">
+    <div class="card card-shadow" style="margin-top:4rem;">
+      <img class="card-img img-fluid opate" src="{{project.imageUrl}}">
+      <div class="card-img-overlay">
+        <h3 class="card-title">{{project.title}}</h3>
+        <p class="card-text">Tech Stack: {{project.tags}}</p>
+        <a href="#" class="card-link"><i class="fa fa-github fa-2x"></i></a>
+        <a href="#" class="card-link"><i class="fa fa-github fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

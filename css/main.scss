@@ -44,6 +44,14 @@ $creamwhite: #F1D4AF;
   overflow:hidden;
   text-overflow: clip;
 }
+// taken from https://scotch.io/tutorials/how-to-change-a-css-background-images-opacity
+.opate{
+  opacity: .3;
+}
+.card-shadow{
+  box-shadow: 10px 10px 5px #888888;
+}
+
 
 #typertext{
   font-color: green;

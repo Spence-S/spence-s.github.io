@@ -20,7 +20,8 @@ I made the site with a cool little library that works nicely with jquery called 
 
 I got to use some es6 arrow functions and template literals just to be fancy. :nail_care:
 
-```javascript
+
+~~~javascript
 const path = window.location.pathname; // returns the page name
   function typer() {
     $("#typertext")
@@ -38,7 +39,7 @@ const path = window.location.pathname; // returns the page name
   setInterval(() => {
     $('#cursor').toggleClass("invisible")
   }, 800)
-```
+~~~
 
 ** insert GIF here **
 
