@@ -9,23 +9,16 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
 // custom variables
-
 $robofont: 'VT323', monospace;
 $terminalfont: 'PT Mono', monospace;
-$creamwhite: #F1D4AF;
+$creamwhite: #F5FFFA;
 
-
-//custom classes
 .robofont{ font-family: $terminalfont; font-size: 4rem}
 .bg-cream{background-color: $creamwhite; }
-
-//resize gravatar like image in corner
 .gravatarish{
     height:4rem;
     width:4rem;
 }
-
-// the terminal elements styles
 .terminal-top{
   background-color: $gray;
   border-style: solid;
@@ -44,19 +37,15 @@ $creamwhite: #F1D4AF;
   overflow:hidden;
   text-overflow: clip;
 }
-// taken from https://scotch.io/tutorials/how-to-change-a-css-background-images-opacity
 .opate{
-  opacity: .3;
+  opacity: .2;
+  height: 15rem;
 }
 .custom-card{
   box-shadow: 5px 5px 3px #888888;
   border-radius: 0;
+  height: 15rem;
 }
-
-
-
-
-
 #typertext{
   font-color: green;
 }
