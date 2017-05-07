@@ -1,0 +1,45 @@
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
+<script>
+  const path = window.location.pathname; // returns the page name
+  function typer() {
+    $("#typertext")
+    .typed({
+      strings: [`cd /spencer${path} ^400`],
+      typeSpeed: 70,
+      showCursor: false,
+      callback: () => {
+        $('#fintext').html(`<h6 class="text-left text-black text-nowrap">~/spencer${path} $: <span id="cursor">_</span></h6>`);
+      }
+    });
+  };
+  window.onload = typer;
+
+  $(document).ready(function(){
+    //cursor blink effect
+    setInterval(() => {
+      $('#cursor').toggleClass("invisible")
+    }, 800);
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip('toggle');
+    });
+  });
+</script>
+<script>
+  $.fn.extend({
+    animateCss: function (animationName) {
+      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      this.addClass('animated ' + animationName).one(animationEnd, function() {
+        $(this).removeClass('animated ' + animationName);
+      });
+    }
+  });
+  $(document).ready(function(){
+    setTimeout(function(){ $('#i3').removeClass('invisible').animateCss("rotateInUpLeft") }, 700);
+    setTimeout(function(){ $('#i2').removeClass('invisible').animateCss("flipInX") }, 500);
+    setTimeout(function(){ $('#i1').removeClass('invisible').animateCss("rotateInUpRight") }, 200);
+    $("#i1").click(function(){$(this).animateCss('bounce')})
+  });
+</script>

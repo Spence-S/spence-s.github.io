@@ -13,12 +13,17 @@ $robofont: 'VT323', monospace;
 $terminalfont: 'PT Mono', monospace;
 $creamwhite: #F5FFFA;
 
+// color variables
+
 .robofont{ font-family: $terminalfont; font-size: 4rem}
+
 .bg-cream{background-color: $creamwhite; }
+
 .gravatarish{
     height:4rem;
     width:4rem;
 }
+
 .terminal-top{
   background-color: $gray;
   border-style: solid;
@@ -27,6 +32,7 @@ $creamwhite: #F5FFFA;
   border-radius: 4px 4px 0 0;
   padding-left: .5rem;
 }
+
 .terminal{
   background-color: $gray-lighter;
   border-style: solid;
@@ -37,15 +43,31 @@ $creamwhite: #F5FFFA;
   overflow:hidden;
   text-overflow: clip;
 }
+
 .opate{
   opacity: .2;
   height: 15rem;
 }
+
 .custom-card{
   box-shadow: 5px 5px 3px #888888;
   border-radius: 0;
   height: 15rem;
 }
+
+.fixed-height{
+  height: 15rem;
+}
+
+.round{
+  border-radius: 75%;
+}
+
+
+.shadow{
+  box-shadow: 5px 5px 3px #888888;
+}
+
 #typertext{
   font-color: green;
 }

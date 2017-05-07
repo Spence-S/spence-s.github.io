@@ -1,88 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Page Title, Duh-->
   <title>{{ page.title }}</title>
-  <!-- Bootstrap css minified blah blah -->
-  <link rel='stylesheet' href='/css/main.css' />
-  <link rel='styleseet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' />
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+  <link rel='stylesheet' href='/css/main.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 <body>
-  <!-- fluid navbar container -->
-  <div class="container">
-    <div>
-      <nav class="navbar navbar-toggleable-md navbar-light">  <!-- bg-faded -->
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="https://github.com/Spence-S/"><img src="https://avatars3.githubusercontent.com/u/16724951?v=3&u=98ad276b5caa576e54060053c08b6d0d9990988e&s=400" class="gravatarish" /></a>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/about">About</a>
-            <a class="nav-item nav-link" href="/blog">Blog</a>
-            <a class="nav-item nav-link" href="/portfolio">Portfolio</a>
-            <a class="nav-item nav-link" href="/teaching">Teaching</a>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <!-- end fluid nav container  -->
-  </div>
-  <!--Site container -->
-  <div class="container">
-    <!-- Terminal Block -->
-    <div class="row bg-faded">
-      <div class="col terminal-top">
-        <i class="fa fa-circle" style="color: red;"></i>
-        <i class="fa fa-circle" style="color: yellow;"></i>
-        <i class="fa fa-circle" style="color: green;"></i>
-      </div>
-    </div>
-    <div class="row terminal robofont">
-      <span>
-        <h6 id="fintext" class="text-left text-black text-nowrap"> ~ $:
-          <em id="typertext" class="text-left text-primary text-nowrap">
-            <span id="cursor">_</span>
-          </em>
-        </h6>
-      </span>
-      <!-- end of terminal like element   -->
-    </div>
-    <!-- Site content will appear in the template block below -->
+  {% include nav.html %}
+  <div class="container-fluid">
+    {% include terminal.html %}
     {{ content }}
   </div>
-  <!-- scripts -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="/javascript/typed.js"></script>
-  <script>
-    const path = window.location.pathname; // returns the page name
-    function typer() {
-      $("#typertext")
-        .typed({
-          strings: [`cd /spencer${path} ^400`],
-          typeSpeed: 70,
-          showCursor: false,
-          callback: () => {
-            $('#fintext').html(`<h6 class="text-left text-black text-nowrap">~/spencer${path} $: <span id="cursor">_</span></h6>`);
-          }
-        });
-    };
-    window.onload = typer;
-    //cursor blink effect
-    setInterval(() => {
-      $('#cursor').toggleClass("invisible")
-    }, 800)
-
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
+{% include scripts.html %}
 </body>
 </html>
