@@ -2,9 +2,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
+<script src="https://unpkg.com/jquery-aniview/dist/jquery.aniview.js"></script>
 <script>
   const path = window.location.pathname; // returns the page name
   function typer() {
+    //console.log('typer was called');
     $("#typertext")
     .typed({
       strings: [`cd /spencer${path} ^400`],
@@ -28,6 +30,7 @@
   });
 </script>
 <script>
+// css animations probably to be removed. This is for the icons on front page
   $.fn.extend({
     animateCss: function (animationName) {
       var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -42,4 +45,9 @@
     setTimeout(function(){ $('#i1').removeClass('invisible').animateCss("rotateInUpRight") }, 200);
     $("#i1").click(function(){$(this).animateCss('bounce')})
   });
+  // aniview init
+  $(document).ready(function(){
+      $('.aniview').AniView();
+  });
+
 </script>
