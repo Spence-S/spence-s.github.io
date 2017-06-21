@@ -1,0 +1,39 @@
+{
+  "name": "spence-s.github.io",
+  "version": "1.0.0",
+  "description": "'Spencer's blog!'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bundle exec jekyll serve --watch",
+    "webpackbuild": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spence-S/spence-s.github.io.git"
+  },
+  "keywords": [
+    "github",
+    "jekyll",
+    "webpack"
+  ],
+  "author": "Spencer Snyder <sasnyde2@gmail.com> (https://spence-s.github.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spence-S/spence-s.github.io/issues"
+  },
+  "homepage": "https://spence-s.github.io",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
