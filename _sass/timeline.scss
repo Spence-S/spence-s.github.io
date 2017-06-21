@@ -1,0 +1,117 @@
+.marker{
+  font-family: 'Permanent Marker', cursive;
+}
+/** About Box**/
+.about-header {
+  position: relative;
+  padding-bottom: 1rem;
+  // horizontal line in middle of screen
+  &::before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: grey;
+    left: 50%;
+    margin-left: -1.5px;
+  }
+  //bottom horizontal line
+  &::after {
+    position: absolute;
+    content: '';
+    width: 70%;
+    left: 5%;
+    height: 3px;
+    background-color: grey;
+    bottom: 0;
+  }
+}
+.about-header-item{
+  position: relative;
+  padding: 1.5rem;
+  // middle horizontal lines
+  &:not(:first-child){
+    &::before{
+      top: 0;
+      content: "";
+      position: absolute;
+      width: 50%;
+      left: 35%;
+      height: 3px;
+      background-color: grey;
+    }
+  }
+}
+
+/** timeline box structure **/
+.timeline {
+  position: relative;
+  // horizontal line in middle of screen
+  &::before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 110%;
+    background-color: grey;
+    left: 50%;
+    margin-left: -1.5px;
+  }
+
+}
+.timeline-item{
+  // set position and pad
+  position: relative;
+  // top horizontal line
+  // &:first-child{
+  //   &::before{
+  //     width: 50%;
+  //     height: 3px;
+  //     border: solid .1rem grey;
+  //     border-radius:0;
+  //     left: 25%;
+  //     top:0;
+  //   }
+  // }
+  // small grey circles
+  &::before, &::after{
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: solid 3px grey;
+    border-radius: 50%;
+    background-color: grey;
+    left: 50%;
+    bottom: -2rem;
+    margin-left: -.5rem;
+  }
+  span {
+    &::before{
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border: solid 3px grey;
+      border-radius: 50%;
+      background-color: white;
+      left:50%;
+      bottom: 60%;
+      margin-left: -.5rem;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      border: solid 3px grey;
+      border-radius: 50%;
+      background-color: white;
+      left:50%;
+      top: 50%;
+      margin-left: -1rem;
+    }
+  }
+}

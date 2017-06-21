@@ -1,0 +1,23 @@
+.terminal-top{
+  background-color: darkgray;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  padding-left: .5rem;
+}
+
+.terminal{
+  background-color: lightgrey;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 1px 0px 1px;
+  padding: 1rem;
+  // hide text on smaller screens
+  overflow:hidden;
+  text-overflow: clip;
+}
+
+#typertext{
+  font-color: green;
+}
