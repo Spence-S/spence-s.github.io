@@ -25,7 +25,6 @@ gulp.task('fonts', function() {
 })
 
 // Clean
-
 gulp.task('clean', function() {
   return gulp.src('assets/')
     .pipe(clean())
@@ -35,9 +34,3 @@ gulp.task('clean', function() {
 gulp.task('watch', [ 'css' ], (done) => {
   gulp.watch('sass/*.scss', [ 'css' ]);
 });
-
-
-const watcher = gulp.watch('sass/*.scss',['css']);
-watcher.on('change', function(event) {
-  console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-})

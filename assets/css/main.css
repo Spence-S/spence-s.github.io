@@ -11561,6 +11561,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     top: 50%;
     margin-left: -1rem; }
 
+.robofont {
+  font-family: "PT Mono", monospace;
+  font-size: 4rem; }
+
 .terminal-top {
   background-color: darkgray;
   border-style: solid;
@@ -11585,13 +11589,27 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .bg-offwhite {
   background: cornsilk; }
 
-.robofont {
-  font-family: "PT Mono", monospace;
-  font-size: 4rem; }
+.paper {
+  border-style: solid;
+  border-color: blanchedalmond;
+  border-width: .1rem 0rem 0rem .1rem; }
 
-.gravatarish {
-  height: 4rem;
-  width: 4rem; }
+.resume-shadow {
+  -webkit-box-shadow: 5px 7px 10px 0px rgba(0, 0, 0, 0.37);
+          box-shadow: 5px 7px 10px 0px rgba(0, 0, 0, 0.37); }
+
+.border-bottom {
+  border-bottom: solid black 1px; }
+
+.marker {
+  font-family: 'Permanent Marker', cursive; }
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
 
 .opate {
   opacity: .2;
@@ -11613,23 +11631,12 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   -webkit-box-shadow: 5px 5px 3px #888888;
           box-shadow: 5px 5px 3px #888888; }
 
+.gravatarish {
+  height: 4rem;
+  width: 4rem; }
+
 ul {
   background: inherit; }
-
-.paper {
-  border-style: solid;
-  border-color: blanchedalmond;
-  border-width: .1rem 0rem 0rem .1rem; }
-
-.resume-shadow {
-  -webkit-box-shadow: 5px 7px 10px 0px rgba(0, 0, 0, 0.37);
-          box-shadow: 5px 7px 10px 0px rgba(0, 0, 0, 0.37); }
-
-.border-bottom {
-  border-bottom: solid black 1px; }
-
-.marker {
-  font-family: 'Permanent Marker', cursive; }
 
 .bg-gradient-top {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FFEDCF), color-stop(70%, #FFFFFF));
