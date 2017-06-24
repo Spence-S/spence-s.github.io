@@ -1,5 +1,7 @@
 // imports
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/animate.css/animate.min";
+@import "node_modules/font-awesome/scss/font-awesome";
 @import "timeline";
 @import "terminal";
 @import "resume";
@@ -8,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=VT323');
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+//@import url('/../../node_modules/font-awesome/fonts/fontawesome-webfont');
 
 // custom variables
 $robofont: 'VT323', monospace;

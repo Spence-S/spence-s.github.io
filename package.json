@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "bundle exec jekyll serve --watch",
     "webpackdev": "webpack --config webpack.config.js --watch",
-    "dev": "concurrently \"npm run webpackdev\" \"npm run start\"",
+    "dev": "gulp clean && gulp css && gulp fonts && ",
     "initWebpack": "webpack-cli init",
-    "buildcss": "gulp css"
+    "buildcss": "gulp css",
+    "watchcss": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -27,13 +28,16 @@
   },
   "homepage": "https://spence-s.github.io",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6"
+    "animate.css": "^3.5.2",
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "concurrently": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
