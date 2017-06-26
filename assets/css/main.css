@@ -11634,6 +11634,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   -webkit-box-shadow: 5px 5px 3px #888888;
           box-shadow: 5px 5px 3px #888888; }
 
+.card-link {
+  position: relative;
+  bottom: 0; }
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+      transform: translate(0); }
+
 .gravatarish {
   height: 4rem;
   width: 4rem; }

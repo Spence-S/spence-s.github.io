@@ -6,119 +6,117 @@
 <script src="https://unpkg.com/jquery-aniview/dist/jquery.aniview.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-const config = {
-  "particles": {
-    "number": {
-      "value": 50,
-      "density": {
-        "enable": false,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "random"
-    },
-    "shape": {
-      "type": "star",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.8,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 10,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 80,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": false,
-      "distance": 300,
-      "color": "#FFFFFF",
-      "opacity": 0.1,
-      "width": 2
-    },
-    "move": {
-      "enable": true,
-      "speed": 2,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "window",
-    "events": {
-      "onhover": {
-        "enable": false,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 800,
-        "line_linked": {
-          "opacity": 1
+  const config = {
+    "particles": {
+      "number": {
+        "value": 50,
+        "density": {
+          "enable": false,
+          "value_area": 800
         }
       },
-      "bubble": {
-        "distance": 800,
-        "size": 80,
-        "duration": 2,
-        "opacity": 0.8,
-        "speed": 3
+      "color": {
+        "value": "random"
       },
-      "repulse": {
-        "distance": 400,
-        "duration": 0.4
+      "shape": {
+        "type": "star",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
       },
-      "push": {
-        "particles_nb": 4
+      "opacity": {
+        "value": 0.8,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
       },
-      "remove": {
-        "particles_nb": 2
+      "size": {
+        "value": 10,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 80,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": false,
+        "distance": 300,
+        "color": "#FFFFFF",
+        "opacity": 0.1,
+        "width": 2
+      },
+      "move": {
+        "enable": true,
+        "speed": 2,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
       }
-    }
-  },
-  "retina_detect": true
-}
-
-particlesJS('particles-js', config);
-console.log('bottom of particles')
+    },
+    "interactivity": {
+      "detect_on": "window",
+      "events": {
+        "onhover": {
+          "enable": false,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 800,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 800,
+          "size": 80,
+          "duration": 2,
+          "opacity": 0.8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 400,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  }
+  particlesJS('particles-js', config);
 </script>
 <script>
   const path = window.location.pathname; // returns the page name
@@ -147,7 +145,7 @@ console.log('bottom of particles')
   });
 </script>
 <script>
-// css animations probably to be removed. This is for the icons on front page
+  // css animations probably to be removed. This is for the icons on front page
   $.fn.extend({
     animateCss: function (animationName) {
       var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -166,4 +164,17 @@ console.log('bottom of particles')
   $(document).ready(function(){
       $('.aniview').AniView();
   });
+</script>
+<script type="text/javascript">
+  $(function(){
+    $('.modal').on('show.bs.modal', function(e){
+      $(this).animateCss('zoomIn');
+    })
+    $('.modal').on('hide.bs.modal', function(e){
+      $('.modal').addClass('animated rotateOut');
+    });
+    $('.modal').on('hidden.bs.modal', function(e){
+      $('.modal').removeClass('animated rotateOut');
+    });
+  })
 </script>
