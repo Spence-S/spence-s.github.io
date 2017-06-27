@@ -11577,11 +11577,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   background-color: lightgrey;
   border-style: solid;
   border-color: black;
-  border-width: 0px 1px 0px 1px;
+  border-width: 0px 1px 1px 1px;
   padding: 1rem;
   overflow: hidden;
   -o-text-overflow: clip;
-     text-overflow: clip; }
+     text-overflow: clip;
+  height: 10rem;
+  border-radius: 0 0 4px 4px; }
 
 #typertext {
   font-color: green; }
@@ -11638,10 +11640,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   position: relative;
   bottom: 0; }
 
-.modal.fade .modal-dialog {
-  -webkit-transform: translate(0);
-  -ms-transform: translate(0);
-      transform: translate(0); }
+.modal-content {
+  border-radius: 0;
+  -webkit-box-shadow: 80px 33px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 80px 33px 5px 0px rgba(0, 0, 0, 0.75); }
+
+.modal-image {
+  position: absolute;
+  width: auto;
+  height: 100%; }
 
 .gravatarish {
   height: 4rem;

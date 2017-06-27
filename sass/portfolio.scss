@@ -20,8 +20,12 @@
   position: relative;
   bottom: 0;
 }
-.modal.fade .modal-dialog {
-   -webkit-transform: translate(0);
-   -moz-transform: translate(0);
-   transform: translate(0);
+.modal-content{
+  border-radius: 0;
+  box-shadow: 80px 33px 5px 0px rgba(0,0,0,0.75);
+}
+.modal-image{
+  position: absolute;
+  width: auto;
+  height: 100%;
 }

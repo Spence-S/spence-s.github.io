@@ -13,11 +13,12 @@
   background-color: lightgrey;
   border-style: solid;
   border-color: black;
-  border-width: 0px 1px 0px 1px;
+  border-width: 0px 1px 1px 1px;
   padding: 1rem;
-  // hide text on smaller screens
   overflow:hidden;
   text-overflow: clip;
+  height: 10rem;
+  border-radius: 0 0 4px 4px;
 }
 
 #typertext{
