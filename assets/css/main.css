@@ -6,9 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=VT323");
-@import url("https://fonts.googleapis.com/css?family=PT+Mono");
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -11561,33 +11559,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     top: 50%;
     margin-left: -1rem; }
 
-.robofont {
-  font-family: "PT Mono", monospace;
-  font-size: 4rem; }
-
-.terminal-top {
-  background-color: darkgray;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
-  border-radius: 4px 4px 0 0;
-  padding-left: .5rem; }
-
-.terminal {
-  background-color: lightgrey;
-  border-style: solid;
-  border-color: black;
-  border-width: 0px 1px 1px 1px;
-  padding: 1rem;
-  overflow: hidden;
-  -o-text-overflow: clip;
-     text-overflow: clip;
-  height: 10rem;
-  border-radius: 0 0 4px 4px; }
-
-#typertext {
-  font-color: green; }
-
 .bg-offwhite {
   background: cornsilk; }
 
@@ -11611,10 +11582,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f3e2c7), color-stop(38%, #c19e67), color-stop(72%, #b68d4c), to(#e9d4b3));
-  background: -o-linear-gradient(top, #f3e2c7 0%, #c19e67 38%, #b68d4c 72%, #e9d4b3 100%);
-  background: linear-gradient(to bottom, #f3e2c7 0%, #c19e67 38%, #b68d4c 72%, #e9d4b3 100%); }
+  left: 0; }
 
 .opate {
   opacity: .2;
@@ -11650,21 +11618,21 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   width: auto;
   height: 100%; }
 
-.gravatarish {
-  height: 4rem;
-  width: 4rem; }
+@media (max-width: 767px) {
+  .abs {
+    margin-top: 3rem; } }
 
-ul {
-  background: inherit; }
+a {
+  color: black; }
 
-.bg-gradient-top {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFEDCF), color-stop(70%, #FFFFFF));
-  background-image: -o-linear-gradient(top, #FFEDCF 0%, #FFFFFF 70%);
-  background-image: linear-gradient(to bottom, #FFEDCF 0%, #FFFFFF 70%); }
+.oswald {
+  font-family: 'Oswald', sans-serif; }
 
-.bg-gradient-bottom {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #FFEDCF), to(#FFFFFF));
-  background-image: -o-linear-gradient(top, #FFEDCF 70%, #FFFFFF 100%);
-  background-image: linear-gradient(to bottom, #FFEDCF 70%, #FFFFFF 100%); }
+.landing {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 /*# sourceMappingURL=maps/main.css.map */

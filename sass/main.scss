@@ -1,33 +1,28 @@
-// custom variables
-$robofont: 'VT323', monospace;
-$terminalfont: 'PT Mono', monospace;
-
 // imports
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/animate.css/animate.min";
 @import "node_modules/font-awesome/scss/font-awesome";
 @import "timeline";
-@import "terminal";
 @import "resume";
 @import "particles";
 @import "portfolio";
+@import "nav";
 
 // cool fonts
-@import url('https://fonts.googleapis.com/css?family=VT323');
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
-.gravatarish{
-    height:4rem;
-    width:4rem;
+a{
+  color: black;
 }
 
-ul {
-  background: inherit;
+.oswald{
+  font-family: 'Oswald', sans-serif;
 }
-.bg-gradient-top{
-  background-image: linear-gradient(to bottom, #FFEDCF 0%, #FFFFFF 70% );
-}
-.bg-gradient-bottom{
-  background-image: linear-gradient(to bottom, #FFEDCF 70%, #FFFFFF 100% );
+
+.landing{
+   position: fixed;
+   top:0;
+   bottom: 0;
+   left:0;
+   right:0;
 }
