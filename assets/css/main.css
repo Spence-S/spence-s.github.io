@@ -11578,7 +11578,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-family: 'Permanent Marker', cursive; }
 
 #particles-js {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -11628,11 +11628,18 @@ a {
 .oswald {
   font-family: 'Oswald', sans-serif; }
 
-.landing {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
+.white {
+  background: #FFFFFD; }
+
+.bottom-caret {
+  position: relative;
+  bottom: 2rem; }
+
+.section {
+  height: 100vh;
+  width: 100vw; }
+
+.see {
+  border: 1px solid black; }
 
 /*# sourceMappingURL=maps/main.css.map */

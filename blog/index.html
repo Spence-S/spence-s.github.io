@@ -3,25 +3,24 @@ layout: default
 title: "Blog"
 ---
 
-<div class="row">
-  <!-- 8 columns for desk top, TODO:seperate mobile layout -->
-  <div class="column-12">
+<div class="row section align-items-center justify-content-center">
+  <div class="col-12 text-center oswald">
     <h1>{{ page.title }}</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="column-12">
-    <div class="list-group">
-      {% for post in site.posts %}
-      <div class="list-group-item list-group-item-action flex-column align-items-start">
-        <div class="row">
-          {{ post.date | date_to_string }}
-        </div>
-        <div class="row">
-          <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-8 col-md-6 col-lg-4 oswald">
+        <div class="list-group">
+          {% for post in site.posts %}
+          <div class="list-group-item list-group-item-action flex-column align-items-center">
+            <div class="row">
+              {{ post.date | date_to_string }}
+            </div>
+            <div class="row">
+              <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </div>
+          </div>
+          {% endfor %}
         </div>
       </div>
-      {% endfor %}
     </div>
   </div>
 </div>
