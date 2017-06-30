@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Building a flash messaging system with Redux(+ React)"
+date: 2017-07-01
+---
+
 While building any type of useful web application that requires user input or interaction in some form or another, it is a critical practice to give users feedback that guides them toward the correct use of the platform and informs them when they make a mistake or otherwise use the platform incorrectly. This is often accomplished with some type of messaging system that flashes the user errors, warnings, and sometimes success messages that let's them better interact with the app.
 
 With legacy node apps, this is typically accomplished with middleware. What then do we do when writing SPAs with React? This is one task where Redux really shines. If you haven't made your own redux module before, this is a great way to understand how independant redux packages work, and why adding error messaging to your store is an excellent way to learn redux in general.
@@ -103,3 +109,5 @@ export default flashState = (state = initialState, action) => {
   }
 }
 ```
+
+Ugh

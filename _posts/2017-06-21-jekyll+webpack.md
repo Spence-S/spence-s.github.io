@@ -57,4 +57,4 @@ bootstrap files, place them in my jekyll \_sass folder and use jekyll to compile
 This wouldn't be too bad of an option except that bootstrap 4 needs its own buildstep as it
 provides no out of the box vendor prefixing. So somehow, we needed to process these files,
 but that is something that is out of the scope of jekyll. (ok... it actually *may* be in the scope of
-jekyll and ruby at large, but its not something jekyll can do out of the box or with github pages.) Since I know JS, I wanted a JS solution to the problem. 
+jekyll and ruby at large, but its not something jekyll can do out of the box or with github pages.) Since I know JS, I wanted a JS solution to the problem.

@@ -14,7 +14,7 @@ child and pseudo CSS selectors!
 
 The timeline container fits easily enought into a full length bootstrap 4 row and col-12.
 
-```css
+``` sass
 .timeline{
   position: relative;
 }
