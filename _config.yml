@@ -5,4 +5,4 @@ exclude: ['node_modules', 'sass', 'Gemfile', 'gulpfile.js', '*.lock', '*.json']
 collections:
   projects:
 future: true
-highlighter: rogue
+highlighter: rouge

@@ -56,7 +56,7 @@ touch src/reducers/flash_reducer.js
 then, open the file in your editor and type:
 
 
-```js
+``` js
 
 const initialState = {
   showFlash: false,
