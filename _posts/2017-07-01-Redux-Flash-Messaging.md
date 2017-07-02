@@ -55,7 +55,9 @@ touch src/reducers/flash_reducer.js
 ```
 then, open the file in your editor and type:
 
-``` js
+
+```js
+
 const initialState = {
   showFlash: false,
   message: '',
@@ -108,6 +110,7 @@ export default flashState = (state = initialState, action) => {
       return state;
   }
 }
+
 ```
 
 Ugh

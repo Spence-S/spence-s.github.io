@@ -3,7 +3,6 @@ title: Honey Dew
 type: Open Source, Full Stack Application
 tags: [ "Express, ", "Node, ", "React Bootstrap, ", "MongoDB ", "React ", "Redux ", "rest API"]
 Demo: 'vigorous-advice.surge.sh'
-imageUrl: "https://pbs.twimg.com/profile_images/854431427/fb-login-logo_400x400.png"
 githubUrl: "https://github.com/Spence-S/node-facebook-login-starter"
 ---
 Honey Dew is a full stack application that shows off skills with a variety of technologies.

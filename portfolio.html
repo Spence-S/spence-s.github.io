@@ -3,8 +3,8 @@ layout: default
 title: Portfolio
 ---
 
-<div class="row">
-  <!-- 8 columns for desk top, TODO:seperate mobile layout -->
+<!-- <div class="row">
+  <!-- 8 columns for desk top, TODO:seperate mobile layout
   <div class="col">
     <h1>{{ page.title }} </h1>
     <p>
@@ -14,18 +14,20 @@ title: Portfolio
       I like to utilize and experiment with a wide variety of both third party libraries for building apps as well as rolling my own solutions for particular needs. Many of the projects have a demo on heroku that is available for viewing.
     </p>
   </div>
-</div>
+</div> -->
 <div class="card-deck" >
   {% for project in site.projects  %}
   <!-- Modal -->
   <div id="{{project.title | remove: " "}}" class="modal fade">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{project.title}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <div class="modal-header justify-content-center">
+          <h3 class="modal-title align-self-stretch oswald">{{project.title}}</h3>
+
+            <button type="button float-right" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
         </div>
         <div class="modal-body" >
           <img class="modal-image opate" src="{{project.imageUrl}}">
@@ -36,29 +38,22 @@ title: Portfolio
         </div>
       </div>
     </div>
-    <!-- <script type="text/javascript">
-      $(function(){
-        $('.modal').on('hide.bs.modal', function(e){
-          console.log('Yay it works');
-        })
-      })
-    </script> -->
   </div>
   <!-- end modal -->
   <!-- start card -->
     <div class="col-sm-12 col-md-6 col-lg-4">
       <div data-toggle="modal" data-target={{"#" | append: project.title | remove: " "}}>
-      <div class="card custom-card" style="margin-top:4rem;">
-        <img class="card-img opate" src="{{project.imageUrl}}">
-        <div class="card-img-overlay">
-          <h3 class="card-title">{{project.title}}</h3>
-          <p class="card-text">Tech Stack: {{project.tags}}</p>
-          <a href={{project.githubUrl}} class="card-link" data-toggle="tooltip" data-placement="top" title="View the code!"><i class="fa fa-github fa-2x"></i></a>
-          <a href="#" class="card-link"><i class="fa fa-facebook fa-2x"></i></a>
-          <div class="">
-            <a href={{project.Demo}} class="card-link">Demo<i class="fa fa-external-link fa-2x"></i></a>
+        <div class="card custom-card" style="margin-top:4rem;">
+          <!-- <img class="card-img opate" src="{{project.imageUrl}}"> -->
+          <div class="card-img-overlay">
+            <h3 class="card-title oswald">{{project.title}}</h3>
+            <p class="card-text">Tech Stack: {{project.tags}}</p>
+            <a href={{project.githubUrl}} class="card-link" data-toggle="tooltip" data-placement="top" title="View the code!"><i class="fa fa-github fa-2x"></i></a>
+            <a href="#" class="card-link"><i class="fa fa-facebook fa-2x"></i></a>
+            <div class="">
+              <a href={{project.Demo}} class="card-link">Demo<i class="fa fa-external-link fa-2x"></i></a>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
