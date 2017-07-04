@@ -11622,6 +11622,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .abs {
     margin-top: 3rem; } }
 
+.btn-secondary {
+  border-radius: 0;
+  margin-top: 1rem; }
+
+.btn-secondary:hover {
+  background-color: #292B2C;
+  color: white;
+  border: .1rem solid grey; }
+
 a {
   color: black; }
 
