@@ -11640,10 +11640,6 @@ a {
 .white {
   background: #FFFFFD; }
 
-.bottom-caret {
-  position: relative;
-  bottom: 2rem; }
-
 .section {
   height: 100vh;
   width: 100vw; }
