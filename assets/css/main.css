@@ -11536,7 +11536,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     left: 50%;
     bottom: -2rem;
     margin-left: -.5rem; }
-  .timeline-item i::before {
+  .timeline-item span::before {
     content: "";
     position: absolute;
     width: 1rem;
@@ -11547,7 +11547,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     left: 50%;
     bottom: 60%;
     margin-left: -.5rem; }
-  .timeline-item i::after {
+  .timeline-item span::after {
     content: "";
     position: absolute;
     width: 2rem;
@@ -11558,6 +11558,56 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     left: 50%;
     top: 50%;
     margin-left: -1rem; }
+
+@media (max-width: 767px) {
+  /** timeline box structure **/
+  .timeline {
+    position: relative; }
+    .timeline::before {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 110%;
+      background-color: grey;
+      left: 5%;
+      margin-left: -1.5px; }
+  .timeline-item {
+    position: relative; }
+    .timeline-item::before, .timeline-item::after {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border: solid 3px grey;
+      border-radius: 50%;
+      background-color: grey;
+      left: 5%;
+      bottom: -2rem;
+      margin-left: -.5rem; }
+    .timeline-item span::before {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border: solid 3px grey;
+      border-radius: 50%;
+      background-color: white;
+      left: 5%;
+      bottom: 60%;
+      margin-left: -.5rem; }
+    .timeline-item span::after {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      border: solid 3px grey;
+      border-radius: 50%;
+      background-color: white;
+      left: 5%;
+      top: 50%;
+      margin-left: -1rem; } }
 
 .bg-offwhite {
   background: cornsilk; }

@@ -77,7 +77,7 @@
     bottom: -2rem;
     margin-left: -.5rem;
   }
-  i {
+  span {
     &::before{
       content: "";
       position: absolute;
@@ -90,6 +90,7 @@
       bottom: 60%;
       margin-left: -.5rem;
     }
+    // large gray outlined circle
     &::after{
       content: "";
       position: absolute;
@@ -101,6 +102,70 @@
       left:50%;
       top: 50%;
       margin-left: -1rem;
+    }
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  /** timeline box structure **/
+  .timeline {
+    position: relative;
+    // horizontal line in middle of screen
+    &::before {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 110%;
+      background-color: grey;
+      left: 5%;
+      margin-left: -1.5px;
+    }
+
+  }
+  .timeline-item{
+    // set position and pad
+    position: relative;
+    // small grey circles
+    &::before, &::after{
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border: solid 3px grey;
+      border-radius: 50%;
+      background-color: grey;
+      left: 5%;
+      bottom: -2rem;
+      margin-left: -.5rem;
+    }
+     span {
+      &::before{
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border: solid 3px grey;
+        border-radius: 50%;
+        background-color: white;
+        left:5%;
+        bottom: 60%;
+        margin-left: -.5rem;
+      }
+      &::after{
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        border: solid 3px grey;
+        border-radius: 50%;
+        background-color: white;
+        left:5%;
+        top: 50%;
+        margin-left: -1rem;
+      }
     }
   }
 }
