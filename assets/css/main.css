@@ -11513,8 +11513,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .timeline {
   position: relative; }
   .timeline::before {
-    top: 0;
-    bottom: 0;
     position: absolute;
     content: "";
     width: 3px;
@@ -11560,6 +11558,38 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     margin-left: -1rem; }
 
 @media (max-width: 767px) {
+  /** About Box**/
+  .about-header {
+    position: relative;
+    padding-bottom: 1rem; }
+    .about-header::before {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 3px;
+      background-color: grey;
+      left: 5%;
+      margin-left: -1.5px; }
+    .about-header::after {
+      position: absolute;
+      content: '';
+      width: 70%;
+      left: 5%;
+      height: 3px;
+      background-color: grey;
+      bottom: 0; }
+  .about-header-item {
+    position: relative;
+    padding: 1.5rem; }
+    .about-header-item:not(:first-child)::before {
+      top: 0;
+      content: "";
+      position: absolute;
+      width: 50%;
+      left: 5%;
+      height: 3px;
+      background-color: grey; }
   /** timeline box structure **/
   .timeline {
     position: relative; }
