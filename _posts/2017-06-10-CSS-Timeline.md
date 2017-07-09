@@ -213,7 +213,7 @@ Here is where bootstrap comes in to play! Here we take the bootstrap responsive 
     <div class="timeline">
       <div class="timeline-item">
         <span></span>
-        <div class="col-12 col-md-6 text-right p-5">
+        <div class="col-md-6 text-right p-5">
           <h3>HEADER CONTENT</h3>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida accumsan laoreet. Donec facilisis condimentum pharetra. Phasellus enim mi, elementum ac sagittis eu, consequat sed tellus. Nunc consectetur ornare aliquet. Praesent vel dui a erat sollicitudin viverra eu tempor ipsum. Etiam eget blandit metus, quis cursus augue. Fusce leo justo, lobortis blandit laoreet vitae, porttitor ac nunc. Quisque et tincidunt neque. Nulla facilisis vehicula rhoncus. Mauris at varius lectus, vel feugiat mi. Sed ac mi feugiat felis condimentum elementum.
         </div>
@@ -224,6 +224,9 @@ Here is where bootstrap comes in to play! Here we take the bootstrap responsive 
 </div>
 ```
 
+Great, the above snippet took our content, and placed in on one side of our timeline. To make the next timeline item stagger to the other side of the timeline, just add an offset.
+
+
 ``` html
 <div class="container-fluid">
 <div class="row mt-3 white">
@@ -231,7 +234,14 @@ Here is where bootstrap comes in to play! Here we take the bootstrap responsive 
     <div class="timeline">
       <div class="timeline-item">
         <span></span>
-        <div class="col-12 col-md-6 text-right p-5">
+        <div class="col-md-6 text-right p-5">
+          <h3>HEADER CONTENT</h3>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida accumsan laoreet. Donec facilisis condimentum pharetra. Phasellus enim mi, elementum ac sagittis eu, consequat sed tellus. Nunc consectetur ornare aliquet. Praesent vel dui a erat sollicitudin viverra eu tempor ipsum. Etiam eget blandit metus, quis cursus augue. Fusce leo justo, lobortis blandit laoreet vitae, porttitor ac nunc. Quisque et tincidunt neque. Nulla facilisis vehicula rhoncus. Mauris at varius lectus, vel feugiat mi. Sed ac mi feugiat felis condimentum elementum.
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span></span>
+        <div class="offset-md-6 col-md-6 text-right p-5">
           <h3>HEADER CONTENT</h3>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida accumsan laoreet. Donec facilisis condimentum pharetra. Phasellus enim mi, elementum ac sagittis eu, consequat sed tellus. Nunc consectetur ornare aliquet. Praesent vel dui a erat sollicitudin viverra eu tempor ipsum. Etiam eget blandit metus, quis cursus augue. Fusce leo justo, lobortis blandit laoreet vitae, porttitor ac nunc. Quisque et tincidunt neque. Nulla facilisis vehicula rhoncus. Mauris at varius lectus, vel feugiat mi. Sed ac mi feugiat felis condimentum elementum.
         </div>
@@ -241,3 +251,37 @@ Here is where bootstrap comes in to play! Here we take the bootstrap responsive 
   </div>
 </div>
 ```
+That's it! Now we have nice staggering timeline events around our timeline, but what about responsiveness?
+
+Let's make it work on all screens.
+
+## Making it Responsive
+
+The beauty of using bootstrap for this little project is that we can quickly make it responsive with just a simple built in class add. Just add a col-12 to our div classes. Any mobile screen will now see our responsive timeline-items.
+
+``` html
+<div class="timeline-item">
+  <span></span>
+  <div class="col-12 col-md-6 text-right p-5">
+    <h3>HEADER CONTENT</h3>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida accumsan laoreet. Donec facilisis condimentum pharetra. Phasellus enim mi, elementum ac sagittis eu, consequat sed tellus. Nunc consectetur ornare aliquet. Praesent vel dui a erat sollicitudin viverra eu tempor ipsum. Etiam eget blandit metus, quis cursus augue. Fusce leo justo, lobortis blandit laoreet vitae, porttitor ac nunc. Quisque et tincidunt neque. Nulla facilisis vehicula rhoncus. Mauris at varius lectus, vel feugiat mi. Sed ac mi feugiat felis condimentum elementum.
+  </div>
+</div>
+```
+Unfortunately, bootstrap can't help us with our timeline and timeline-item custom classes. Or can it?
+
+Well make use of bootstraps media queries. I like using their sass mixins rather than
+writing pure css media queries.
+
+``` scss
+@include media-breakpoint-down(sm) { ... }
+```
+
+We can simply copy and paste our timeline css block into the media query.
+
+Then, we change all our left aligns from 50% to 5%. This will move all our cool
+timline lines and circles to the left of any text on all screen sizes.
+
+Note, that we do add a p-5 bootstrap class to our timeline item content div. This makes it look nicer as well as providing the appropriate padding for our timeline.
+
+Hope you enjoyed! As always comment with any questions or corrections!
