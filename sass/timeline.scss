@@ -58,55 +58,54 @@
     margin-left: -1.5px;
   }
 
-}
-.timeline-item{
-  // set position and pad
-  position: relative;
-  // small grey circles
-  &::before, &::after{
-    content: "";
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border: solid 3px grey;
-    border-radius: 50%;
-    background-color: grey;
-    left: 50%;
-    bottom: -2rem;
-    margin-left: -.5rem;
-  }
-  span {
-    &::before{
+  .timeline-item{
+    // set position and pad
+    position: relative;
+    // small grey circles
+    &::before, &::after{
       content: "";
       position: absolute;
       width: 1rem;
       height: 1rem;
       border: solid 3px grey;
       border-radius: 50%;
-      background-color: white;
-      left:50%;
-      bottom: 60%;
+      background-color: grey;
+      left: 50%;
+      top: .5rem;
       margin-left: -.5rem;
     }
-    // large gray outlined circle
-    &::after{
-      content: "";
-      position: absolute;
-      width: 2rem;
-      height: 2rem;
-      border: solid 3px grey;
-      border-radius: 50%;
-      background-color: white;
-      left:50%;
-      top: 50%;
-      margin-left: -1rem;
+    span {
+      &::before{
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border: solid 3px grey;
+        border-radius: 50%;
+        background-color: white;
+        left:50%;
+        bottom: 60%;
+        margin-left: -.5rem;
+      }
+      // large gray outlined circle
+      &::after{
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        border: solid 3px grey;
+        border-radius: 50%;
+        background-color: white;
+        left:50%;
+        top: 50%;
+        margin-left: -1rem;
+      }
     }
   }
 }
 
 
 @include media-breakpoint-down(sm) {
-
   /** About Box**/
   .about-header {
     position: relative;

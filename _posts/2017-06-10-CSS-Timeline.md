@@ -21,8 +21,8 @@ of bootstrap 4s sass variables. This is not 100% nescesarry as you could write y
 media queries by hand, however, I like using bootstraps and will not be covering that. I also assume you have a bit of familiarity with bootstrap, but if not
 its pretty simple to learn.
 
-``` bash
-npm install bootstrap@4
+``` terminal
+  npm install bootstrap@4
 ```
 I am not going to cover how to preprocess your scss files here. If you are interested
 in implementing a front end build process, I have some articles on using both
@@ -38,21 +38,21 @@ classes and your custom css file.
 First off, lets get a nice bootstrap layout going. We can get an idea of what we
 are going to be building nicely just by seeing the HTML.
 
-``` HTML
-<div class="container-fluid">
-  <div class="row mt-3">
-    <div class="col-12">
-      <div class="timeline">
-        <div class="timeline-item">
-          <!-- Timeline Content Here -->
-        </div>
-        <div class="timeline-item">
-          <!-- Next timeline Content Here -->
+``` html
+  <div class="container-fluid">
+    <div class="row mt-3">
+      <div class="col-12">
+        <div class="timeline">
+          <div class="timeline-item">
+            <!-- Timeline Content Here -->
+          </div>
+          <div class="timeline-item">
+            <!-- Next timeline Content Here -->
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 ```
 Alright. Well that did basically nothing, but it did give us an idea of what we will be buildign and how we will be building it. We basically have a nice
 bootstrap layout and our timeline and timeline-items are going to be completely custom css classes that we are going to build.
@@ -108,6 +108,7 @@ First, let's add a couple of cute little dots that will sit on the line, beside
 our content. Sound good? Good.
 
 ``` scss
+    // timeline wrapper
     .timeline {
       position: relative;
       // main horizontal line
@@ -121,5 +122,122 @@ our content. Sound good? Good.
         margin-left: -1.5px;
       }
 
+      // timelime item: notice it is still wrapped by the timeline in the scss!  
+      .timeline-item
+      position: relative;
+      &::before, &::after{
+        position:absolute;
+        width: 1rem;
+        height: 1rem;
+        border: solid 3px grey;
+        border-radius: 50%;
+        background-color: grey;
+        left: 50%;
+        bottom: -2rem;
+      }
     }
+```
+
+Alright, alright! We now have a couple circles just hanging out and chillin beside out timeline-items. But we want more! More it better. Let's get set up a span element selector that renders us a couple more!
+
+``` scss
+// timeline wrapper
+.timeline {
+  position: relative;
+  // main horizontal line
+  &::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: grey;
+    left: 50%;
+    margin-left: -1.5px;
+  }
+  // timelime item: notice it is still wrapped by the timeline in the scss!  
+  .timeline-item
+    position: relative;
+    &::before, &::after {
+      position:absolute;
+      width: 1rem;
+      height: 1rem;
+      border: solid 3px grey;
+      border-radius: 50%;
+      background-color: grey;
+      left: 50%;
+      top: 2rem;
+    }
+    span {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border: solid 3px grey;
+        border-radius: 50%;
+        background-color: white;
+        left:50%;
+        bottom: 60%;
+        margin-left: -.5rem;
+      }
+      // large gray outlined circle
+      &::after {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        border: solid 3px grey;
+        border-radius: 50%;
+        background-color: white;
+        left:50%;
+        top: 50%;
+        margin-left: -1rem;
+      }
+    }
+  }
+}
+```
+
+Here we take the span element and render some absolutely positioned before and after pseudo elements of different sizes.
+These elements will now always render beside the content and centered to it.
+
+
+## Responsiveness and Content placement
+
+Here is where bootstrap comes in to play! Here we take the bootstrap responsive columns and position them around the timeline we just drew with CSS.
+
+``` html
+<div class="container-fluid">
+<div class="row mt-3 white">
+  <div class="col-12">
+    <div class="timeline">
+      <div class="timeline-item">
+        <span></span>
+        <div class="col-12 col-md-6 text-right p-5">
+          <h3>HEADER CONTENT</h3>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida accumsan laoreet. Donec facilisis condimentum pharetra. Phasellus enim mi, elementum ac sagittis eu, consequat sed tellus. Nunc consectetur ornare aliquet. Praesent vel dui a erat sollicitudin viverra eu tempor ipsum. Etiam eget blandit metus, quis cursus augue. Fusce leo justo, lobortis blandit laoreet vitae, porttitor ac nunc. Quisque et tincidunt neque. Nulla facilisis vehicula rhoncus. Mauris at varius lectus, vel feugiat mi. Sed ac mi feugiat felis condimentum elementum.
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+``` html
+<div class="container-fluid">
+<div class="row mt-3 white">
+  <div class="col-12">
+    <div class="timeline">
+      <div class="timeline-item">
+        <span></span>
+        <div class="col-12 col-md-6 text-right p-5">
+          <h3>HEADER CONTENT</h3>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida accumsan laoreet. Donec facilisis condimentum pharetra. Phasellus enim mi, elementum ac sagittis eu, consequat sed tellus. Nunc consectetur ornare aliquet. Praesent vel dui a erat sollicitudin viverra eu tempor ipsum. Etiam eget blandit metus, quis cursus augue. Fusce leo justo, lobortis blandit laoreet vitae, porttitor ac nunc. Quisque et tincidunt neque. Nulla facilisis vehicula rhoncus. Mauris at varius lectus, vel feugiat mi. Sed ac mi feugiat felis condimentum elementum.
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
