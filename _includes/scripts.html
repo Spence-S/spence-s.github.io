@@ -60,74 +60,7 @@ let config = {
   retina_detect: true
 };
 
-particlesJS("particles-js", config
-// {
-//   particles: {
-//     number: { value: 15, density: { enable: true, value_area: 800 } },
-//     color: { value: "#1b1e34" },
-//     shape: {
-//       type: "polygon",
-//       stroke: { width: 0, color: "#000" },
-//       polygon: { nb_sides: 3 },
-//       image: { src: "img/github.svg", width: 100, height: 100 }
-//     },
-//     opacity: {
-//       value: 0.1,
-//       random: true,
-//       anim: { enable: false, speed: .9, opacity_min: 0.1, sync: false }
-//     },
-//     size: {
-//       value: 160,
-//       random: true,
-//       anim: { enable: false, speed: 10, size_min: 40, sync: false }
-//     },
-//     line_linked: {
-//       enable: true,
-//       distance: 500,
-//       color: "#000000",
-//       opacity: .1,
-//       width: 2
-//     },
-//     move: {
-//       enable: true,
-//       speed: 5,
-//       direction: "none",
-//       random: false,
-//       straight: false,
-//       out_mode: "out",
-//       bounce: false,
-//       attract: { enable: false, rotateX: 600, rotateY: 1200 }
-//     }
-//   },
-//   interactivity: {
-//     detect_on: "canvas",
-//     events: {
-//       onhover: { enable: false, mode: "grab" },
-//       onclick: { enable: false, mode: "push" },
-//       resize: true
-//     },
-//     modes: {
-//       grab: { distance: 400, line_linked: { opacity: .1 } },
-//       bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
-//       repulse: { distance: 200, duration: 0.4 },
-//       push: { particles_nb: 1 },
-//       remove: { particles_nb: 2 }
-//     }
-//   },
-//   retina_detect: true
-// }
-);
-
-document.getElementById('stopMotion').addEventListener('click', function(){
-  config.particles.move.enable = !config.particles.move.enable;
-  if (config.particles.move.enable) {
-    particlesJS("particles-js", config);
-    this.innerHTML = "stop motion";
-  } else{
-    particlesJS("particles-js", config);
-    this.innerHTML = "start motion"
-  };
-})
+particlesJS("particles-js", config);
 </script>
 <script>
   // css animations probably to be removed. This is for the icons on front page
@@ -279,7 +212,48 @@ $(function(){
     }
   });
 
+  var Posts = Barba.BaseView.extend({
+    namespace: 'post',
+    onEnter: function() {
+      // The new Container is ready and attached to the DOM.
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+      var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://spence-s.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    },
+    onEnterCompleted: function() {
+      // The Transition has just finished.
+    },
+    onLeave: function() {
+      // A new Transition toward a new page has just started.
+    },
+    onLeaveCompleted: function() {
+      // The Container has just been removed from the DOM.
+    }
+  });
+
+
+
   Homepage.init();
+  Posts.init();
   Barba.Pjax.start();
+});
+
+Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
+    var js = container.querySelector("script");
+    if(js != null){
+        eval(js.innerHTML);
+    }
 });
 </script>
