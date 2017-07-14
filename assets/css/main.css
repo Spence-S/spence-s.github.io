@@ -11706,7 +11706,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 @media (max-width: 767px) {
   .abs {
     margin-top: 3rem; }
-  .bg-white {
+  .bg-sm-white {
     background-color: white; } }
 
 .bg-white {
