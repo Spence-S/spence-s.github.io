@@ -1,4 +1,5 @@
 ---
+layout: project
 title: Node Facebook Starter
 type: Open Source
 tags: [ "Express, ", "Node, ", "Bootstrap, ", "MongoDB "]

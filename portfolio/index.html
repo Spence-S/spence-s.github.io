@@ -1,0 +1,34 @@
+---
+layout: default
+title: Portfolio
+---
+
+<!-- <div class="row">
+  <!-- 8 columns for desk top, TODO:seperate mobile layout
+  <div class="col">
+    <h1>{{ page.title }} </h1>
+    <p>
+      The projects listed here are in no particular order.
+      They highlight skills over a wide range of front-end and back-end javascript technologies.
+      I focus on application security, simplicity, and ease of use.
+      I like to utilize and experiment with a wide variety of both third party libraries for building apps as well as rolling my own solutions for particular needs. Many of the projects have a demo on heroku that is available for viewing.
+    </p>
+  </div>
+</div> -->
+<div class="card-deck" >
+  {% for project in site.projects  %}
+  <!-- start card -->
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card custom-card" style="margin-top:4rem;">
+        <!-- <img class="card-img opate" src="{{project.imageUrl}}"> -->
+        <div class="card-img-overlay">
+          <a href={{project.url}}><h3 class="card-title oswald">{{project.title}}</h3></a>
+          <p class="card-text">Tech Stack: {{project.tags}}</p>
+          <a href={{project.githubUrl}} class="card-link" data-toggle="tooltip" data-placement="top" title="View the code!"><i class="fa fa-github fa-2x"></i></a>
+          <a href="#" class="card-link"><i class="fa fa-facebook fa-2x"></i></a>
+          <a href={{project.Demo}} class="card-link">Demo<i class="fa fa-external-link fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>

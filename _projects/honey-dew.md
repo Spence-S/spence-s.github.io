@@ -1,4 +1,5 @@
 ---
+layout: project
 title: Honey Dew
 type: Open Source, Full Stack Application
 tags: [ "Express, ", "Node, ", "React Bootstrap, ", "MongoDB ", "React ", "Redux ", "rest API"]

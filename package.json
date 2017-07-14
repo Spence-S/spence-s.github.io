@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "bundle exec jekyll serve --watch",
+    "start": "concurrently \"bundle exec jekyll serve --watch\" \"npm run watchcss\" ",
     "webpackdev": "webpack --config webpack.config.js --watch",
     "dev": "gulp clean && gulp css && gulp fonts && ",
     "initWebpack": "webpack-cli init",

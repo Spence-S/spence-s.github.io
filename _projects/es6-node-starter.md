@@ -1,4 +1,5 @@
 ---
+layout: project
 title: ES6 Node Starter
 type: Open Source
 tags: [ "Node, ", "Express, ","Mongo, ","JWT"]
