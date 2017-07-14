@@ -1,6 +1,12 @@
 @include media-breakpoint-down(sm) {
   .abs{
     margin-top: 3rem;
-    background-color:white;
   }
+  .bg-white{
+    background-color: white;
+  }
+}
+.bg-white{
+  background-color: white;
+  transition: background-color 400ms;
 }

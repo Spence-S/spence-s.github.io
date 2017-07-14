@@ -11705,8 +11705,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 @media (max-width: 767px) {
   .abs {
-    margin-top: 3rem;
+    margin-top: 3rem; }
+  .bg-white {
     background-color: white; } }
+
+.bg-white {
+  background-color: white;
+  -webkit-transition: background-color 400ms;
+  -o-transition: background-color 400ms;
+  transition: background-color 400ms; }
 
 .btn-secondary {
   border-radius: 0;
