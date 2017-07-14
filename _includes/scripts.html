@@ -260,7 +260,6 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
 <script type="text/javascript">
   $(function(){
     $(document).scroll(function(){
-      console.log('Adding class to .navbar now!');
       $(".navbar")
         .addClass("bg-white", $(this).scrollTop() > $(".navbar").height());
     });
