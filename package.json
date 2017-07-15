@@ -12,11 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/Spence-S/spence-s.github.io.git"
   },
-  "keywords": [
-    "github",
-    "jekyll",
-    "webpack"
-  ],
+  "keywords": ["github", "jekyll", "webpack"],
   "author": "Spencer Snyder <sasnyde2@gmail.com> (https://spence-s.github.io)",
   "license": "ISC",
   "bugs": {
@@ -25,6 +21,7 @@
   "homepage": "https://spence-s.github.io",
   "dependencies": {
     "animate.css": "^3.5.2",
+    "barba.js": "^1.0.0",
     "bootstrap": "^4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
@@ -37,7 +34,6 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-0": "^6.24.1",
     "babelify": "^7.3.0",
-    "barba.js": "^1.0.0",
     "browserify": "^14.4.0",
     "concurrently": "^3.5.0",
     "gulp": "^3.9.1",
