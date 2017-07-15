@@ -1,16 +1,12 @@
 {
   "name": "spence-s.github.io",
   "version": "1.0.0",
-  "description": "'Spencer's blog!'",
+  "description": "Spencer's blog!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"bundle exec jekyll serve --watch\" \"npm run watchcss\" ",
-    "webpackdev": "webpack --config webpack.config.js --watch",
-    "dev": "gulp clean && gulp css && gulp fonts && ",
-    "initWebpack": "webpack-cli init",
-    "buildcss": "gulp css",
-    "watchcss": "gulp watch"
+    "watchcss": "gulp watchcss",
+    "watchjs": "gulp watchjs"
   },
   "repository": {
     "type": "git",
@@ -32,20 +28,28 @@
     "bootstrap": "^4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "scrollreveal": "^3.3.6",
+    "tether": "^1.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babelify": "^7.3.0",
+    "barba.js": "^1.0.0",
+    "browserify": "^14.4.0",
     "concurrently": "^3.5.0",
-    "enzyme": "^2.9.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean": "^0.3.2",
+    "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "node-sass": "^4.5.3",
-    "react-addons-test-utils": "^15.6.0",
-    "react-test-renderer": "^15.6.1"
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
   }
 }

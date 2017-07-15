@@ -1,0 +1,10 @@
+const jQuery = (window.$ = window.jQuery = require('jquery'));
+window.Tether = require('tether');
+require('bootstrap/dist/js/bootstrap');
+require('particles.js');
+require('./particles');
+window.ScrollReveal = require('scrollreveal');
+require('./animateCssHelper');
+window.Barba = require('barba.js');
+require('./barbaConfig');
+require('./navbarEffects');
