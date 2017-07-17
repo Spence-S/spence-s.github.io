@@ -4,7 +4,7 @@
   "description": "Spencer's blog!",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"bundle exec jekyll serve --watch\" \"npm run watchcss\" ",
+    "start": "concurrently \"bundle exec jekyll serve --watch\" \"npm run watchcss\" \"npm run watchjs\" ",
     "watchcss": "gulp watchcss",
     "watchjs": "gulp watchjs"
   },
