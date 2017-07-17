@@ -1,4 +1,5 @@
 ---
+layout: project
 title: React Native Giphy
 type: Open Source
 tags: [ "React, ", "React-Native "]

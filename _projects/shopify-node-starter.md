@@ -1,4 +1,5 @@
 ---
+layout: project
 title: Node Shopify Starter
 type: Open Source
 tags: [ "Node, ", "Express, ", "pug, ", "ShopifyAPI, " ,"OAuth-2"]
