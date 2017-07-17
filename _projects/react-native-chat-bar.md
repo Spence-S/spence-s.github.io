@@ -10,3 +10,5 @@ React Native Chat Bar is a multi component utility bar for a chat application. I
 The UI is intuitive and simple and powerful and can give any basic chat UI a more modern feel without all the legwork.
 
 The API is intuitive and simple, but can be completely customized through an easy to understand prop configuration.
+
+Stay tuned for a link to the code and demo!

@@ -4,6 +4,7 @@ title: React Native Giphy
 type: Open Source
 tags: [ "React, ", "React-Native "]
 imageUrl: "https://www.progville.com/wp-content/uploads/2015/01/react-native-ios-javascript.jpg"
+githubUrl: "https://github.com/joinspontaneous/react-native-giphy"
 ---
 A react-native project that allows easily additions of a giphy search to any input text type. Ideally, it can be used for chat apps. It has easy itegration with [React-Native-Gifted-Chat](https://github.com/FaridSafi/react-native-gifted-chat).
 
