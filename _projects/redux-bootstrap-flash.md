@@ -1,8 +1,12 @@
 ---
 layout: project
 title: Redux Bootstrap Flash
-type: Open Source
-tags: [ "React, ", "Redux, ","Bootstrap, ","Open Source"]
+order: 2
+tags:
+  - React: "http://facebook.github.io/react"
+  - Redux: "http://reduxjs.org"
+  - Bootstrap3: "http://getbootstrap.com"
+  - npm: "http://npmjs.com/package/redux-bootstrap-flash" 
 githubUrl: "https://github.com/Spence-S/redux-bootstrap-flash"
 Demo: 'http://feigned-stream.surge.sh/'
 ---

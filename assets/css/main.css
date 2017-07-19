@@ -11703,6 +11703,20 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   width: auto;
   height: 100%; }
 
+.project-header-border {
+  border: .1rem solid darkgrey;
+  border-bottom: 0;
+  border-radius: .3rem .3rem 0 0; }
+
+.project-content-border {
+  border-left: .1rem solid darkgrey;
+  border-right: .1rem solid darkgrey; }
+
+.project-footer-border {
+  border: .1rem solid darkgrey;
+  border-top: 0;
+  border-radius: 0 0 .3rem .3rem; }
+
 @media (max-width: 767px) {
   .abs {
     margin-top: 2.5rem; }

@@ -3,18 +3,35 @@ layout: default
 title: Portfolio
 ---
 
-<div class="card-deck" >
-  {% for project in site.projects  %}
+<div class="card-deck mt-5" >
+  {% assign sorted = site.projects | sort:"order" %}
+  {% for project in sorted | sort:"order"  %}
   <!-- start card -->
     <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card custom-card" style="margin-top:4rem;">
-        <!-- <img class="card-img opate" src="{{project.imageUrl}}"> -->
-        <div class="card-img-overlay">
-          <a href={{project.url}}><h3 class="card-title oswald">{{project.title}}</h3></a>
-          <p class="card-text">Tech Stack: {{project.tags}}</p>
-          <a href={{project.githubUrl}} class="card-link" data-toggle="tooltip" data-placement="top" title="View the code!"><i class="fa fa-github fa-2x"></i></a>
-          <a href="#" class="card-link"><i class="fa fa-facebook fa-2x"></i></a>
-          <a href={{project.Demo}} class="card-link">Demo<i class="fa fa-external-link fa-2x"></i></a>
+      <div class="card custom-card mt-5 p-2">
+        <a href={{project.url}}><h3 class="card-title oswald">{{project.title}}</h3></a>
+        <p class="card-text"> <strong>Tech Stack:</strong>
+          {% for tag_hash in project.tags %}
+           {% for tag in tag_hash %}
+              <a href={{ tag[1] }}>{{ tag[0] }}
+              {% if tag_hash != project.tags.last %},{% endif %}
+              </a>
+           {% endfor %}
+          {% endfor %}
+        </p>
+        <!-- row covers entire bottom of card -->
+        <div class="row h-100 align-items-end p-2">
+          {% if project.githubUrl %}
+            <div class="col-4">
+              <a href={{project.githubUrl}} class="card-link" data-toggle="tooltip" data-placement="top" title="View the code!"><i class="fa fa-github fa-2x"></i>Code</a>
+            </div>
+          {% endif %}
+          {% if project.Demo %}
+            <div class="col-4">
+              <a href={{project.Demo}} class="card-link"><i class="fa fa-external-link fa-2x"></i></a>
+              Demo
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>

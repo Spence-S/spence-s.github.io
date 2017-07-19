@@ -1,31 +1,45 @@
-.opate{
+.opate {
   opacity: .2;
   height: 15rem;
 }
-.custom-card{
+.custom-card {
   box-shadow: 5px 5px 3px #888888;
   border-radius: 0;
   height: 15rem;
 }
-.fixed-height{
+.fixed-height {
   height: 15rem;
 }
-.round{
+.round {
   border-radius: 75%;
 }
-.shadow{
+.shadow {
   box-shadow: 5px 5px 3px #888888;
 }
 .card-link {
   position: relative;
   bottom: 0;
 }
-.modal-content{
+.modal-content {
   border-radius: 0;
-  box-shadow: 80px 33px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 80px 33px 5px 0px rgba(0, 0, 0, 0.75);
 }
-.modal-image{
+.modal-image {
   position: absolute;
   width: auto;
   height: 100%;
+}
+.project-header-border {
+  border: .1rem solid darkgrey;
+  border-bottom: 0;
+  border-radius: .3rem .3rem 0 0;
+}
+.project-content-border {
+  border-left: .1rem solid darkgrey;
+  border-right: .1rem solid darkgrey;
+}
+.project-footer-border {
+  border: .1rem solid darkgrey;
+  border-top: 0;
+  border-radius: 0 0 .3rem .3rem;
 }

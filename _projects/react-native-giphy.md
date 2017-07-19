@@ -1,8 +1,11 @@
 ---
 layout: project
 title: React Native Giphy
+order: 1
 type: Open Source
-tags: [ "React, ", "React-Native "]
+tags:
+  - React: http://facebook.github.io/react
+  - React-Native: http://facebook.github.io/react-native
 imageUrl: "https://www.progville.com/wp-content/uploads/2015/01/react-native-ios-javascript.jpg"
 githubUrl: "https://github.com/joinspontaneous/react-native-giphy"
 ---

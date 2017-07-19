@@ -1,9 +1,13 @@
 ---
 layout: project
 title: React Native Chat Bar
+order: 6
 type: Open Source
-tags: [ "React, ", "React-Native "]
+tags:
+  - React: http://facebook.github.io/react
+  - React-Native: http://facebook.github.io/react-native
 imageUrl: "https://image.slidesharecdn.com/react-native-ppt-150819170515-lva1-app6891/95/react-native-introductory-tutorial-1-638.jpg?cb=1440004243"
+githubUrl: false
 ---
 React Native Chat Bar is a multi component utility bar for a chat application. It is fully featured with a camera, GIF search powered by giphy (react-native-giphy), and camera roll access.
 
