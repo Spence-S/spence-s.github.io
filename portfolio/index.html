@@ -7,15 +7,14 @@ title: Portfolio
   {% assign sorted = site.projects | sort:"order" %}
   {% for project in sorted | sort:"order"  %}
   <!-- start card -->
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card custom-card mt-5 p-2">
+    <div class="col-sm-12 col-md-6 col-lg-4 mt-5">
+      <div class="card custom-card p-2">
         <a href={{project.url}}><h3 class="card-title oswald">{{project.title}}</h3></a>
         <p class="card-text"> <strong>Tech Stack:</strong>
           {% for tag_hash in project.tags %}
            {% for tag in tag_hash %}
-              <a href={{ tag[1] }}>{{ tag[0] }}
-              {% if tag_hash != project.tags.last %},{% endif %}
-              </a>
+           <a href={{ tag[1] }}>{{ tag[0] }}</a>
+                  {% if tag_hash != project.tags.last %},{% endif %}
            {% endfor %}
           {% endfor %}
         </p>

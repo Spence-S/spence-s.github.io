@@ -11717,6 +11717,11 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   border-top: 0;
   border-radius: 0 0 .3rem .3rem; }
 
+.portfolio-header-border {
+  border: .1rem solid darkgrey;
+  border-radius: .3rem;
+  background-color: white; }
+
 @media (max-width: 767px) {
   .abs {
     margin-top: 2.5rem; }
