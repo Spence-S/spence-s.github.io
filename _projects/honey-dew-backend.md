@@ -10,7 +10,7 @@ tags:
   - Mongoose: "http://www.mongoosejs.com"
   - JWT: "https://jwt.io/"
 Demo: 'http://vigorous-advice.surge.sh'
-githubUrl: "https://github.com/Spence-S/honey-dew"
+githubUrl: "https://github.com/Spence-S/honey-dew-backend"
 ---
 Honey Dew is a full stack application that shows off skills with a variety of technologies.
 
