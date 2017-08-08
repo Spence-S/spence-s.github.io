@@ -1,7 +1,7 @@
 ---
 layout: project
 title: React Native Chat Bar
-order: 6
+order: 7
 type: Open Source
 tags:
   - React: http://facebook.github.io/react

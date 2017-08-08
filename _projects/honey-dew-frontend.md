@@ -2,12 +2,8 @@
 layout: project
 title: Honey Dew
 order: 0
-type: Open Source, Full Stack Application
+type: Open Source, Full Stack Application, UI
 tags:
-  - NodeJS: "http://www.nodejs.org"
-  - Express: "http://www.expressjs.com"
-  - MongoDB: "http://www.mongodb.com"
-  - Mongoose: "http://www.mongoosejs.com"
   - React: "http://facebook.github.io/react"
   - Redux: "http://reduxjs.org"
   - React Bootstrap: "http://react-bootstrap.github.io"

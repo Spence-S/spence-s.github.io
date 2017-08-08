@@ -1,7 +1,7 @@
 ---
 layout: project
 title: React Native Giphy
-order: 1
+order: 2
 type: Open Source
 tags:
   - React: http://facebook.github.io/react

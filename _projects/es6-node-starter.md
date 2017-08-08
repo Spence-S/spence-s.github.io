@@ -1,7 +1,7 @@
 ---
 layout: project
 title: ES6 Node Starter
-order: 4
+order: 5
 type: Open Source
 tags:
   - Node: http://nodejs.org

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Spence-S.github.io
-order: 5
+order: 6
 tags:
   - Jekyll Rb:
   - Liquid Templates:
