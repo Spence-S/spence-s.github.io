@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Honey Dew
+title: Honey Dew Front End
 order: 0
 type: Open Source, Full Stack Application, UI
 tags:

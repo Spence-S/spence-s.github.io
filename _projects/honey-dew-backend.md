@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Honey Dew
+title: Honey Dew Backend
 order: 1
 type: Open Source, Full Stack Application, API, Rest
 tags:
