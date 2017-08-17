@@ -11472,6 +11472,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   overflow: visible;
   clip: auto; }
 
+.mobile-height {
+  height: 100vh;
+  width: 100vw; }
+
 .marker {
   font-family: 'Permanent Marker', cursive; }
 
@@ -11558,9 +11562,12 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 @media (max-width: 767px) {
   /** About Box**/
+  .mobile-height {
+    height: 100%; }
   .about-header {
     position: relative;
-    padding-bottom: 1rem; }
+    padding-bottom: 1rem;
+    overflow: visible; }
     .about-header::before {
       content: " ";
       top: 0;

@@ -1,4 +1,8 @@
-.marker{
+.mobile-height {
+  height: 100vh;
+  width: 100vw;
+}
+.marker {
   font-family: 'Permanent Marker', cursive;
 }
 /** About Box**/
@@ -27,12 +31,12 @@
     bottom: 0;
   }
 }
-.about-header-item{
+.about-header-item {
   position: relative;
   padding: 1.5rem;
   // middle horizontal lines
-  &:not(:first-child){
-    &::before{
+  &:not(:first-child) {
+    &::before {
       top: 0;
       content: "";
       position: absolute;
@@ -58,11 +62,12 @@
     margin-left: -1.5px;
   }
 
-  .timeline-item{
+  .timeline-item {
     // set position and pad
     position: relative;
     // small grey circles
-    &::before, &::after{
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       width: 1rem;
@@ -75,7 +80,7 @@
       margin-left: -.5rem;
     }
     span {
-      &::before{
+      &::before {
         content: "";
         position: absolute;
         width: 1rem;
@@ -83,12 +88,12 @@
         border: solid 3px grey;
         border-radius: 50%;
         background-color: white;
-        left:50%;
+        left: 50%;
         bottom: 60%;
         margin-left: -.5rem;
       }
       // large gray outlined circle
-      &::after{
+      &::after {
         content: "";
         position: absolute;
         width: 2rem;
@@ -96,7 +101,7 @@
         border: solid 3px grey;
         border-radius: 50%;
         background-color: white;
-        left:50%;
+        left: 50%;
         top: 50%;
         margin-left: -1rem;
       }
@@ -104,12 +109,15 @@
   }
 }
 
-
 @include media-breakpoint-down(sm) {
   /** About Box**/
+  .mobile-height {
+    height: 100%;
+  }
   .about-header {
     position: relative;
     padding-bottom: 1rem;
+    overflow: visible;
     // horizontal line in middle of screen
     &::before {
       content: " ";
@@ -133,12 +141,12 @@
     }
   }
 
-  .about-header-item{
+  .about-header-item {
     position: relative;
     padding: 1.5rem;
     // middle horizontal lines
-    &:not(:first-child){
-      &::before{
+    &:not(:first-child) {
+      &::before {
         top: 0;
         content: "";
         position: absolute;
@@ -165,48 +173,49 @@
       left: 5%;
       margin-left: -1.5px;
     }
-  .timeline-item{
-    // set position and pad
-    position: relative;
-    // small grey circles
-    &::before, &::after{
-      content: "";
-      position: absolute;
-      width: 1rem;
-      height: 1rem;
-      border: solid 3px grey;
-      border-radius: 50%;
-      background-color: grey;
-      left: 5%;
-      bottom: -2rem;
-      margin-left: -.5rem;
-    }
-     span {
-      &::before{
+    .timeline-item {
+      // set position and pad
+      position: relative;
+      // small grey circles
+      &::before,
+      &::after {
         content: "";
         position: absolute;
         width: 1rem;
         height: 1rem;
         border: solid 3px grey;
         border-radius: 50%;
-        background-color: white;
-        left:5%;
-        bottom: 60%;
+        background-color: grey;
+        left: 5%;
+        bottom: -2rem;
         margin-left: -.5rem;
       }
-      &::after{
-        content: "";
-        position: absolute;
-        width: 2rem;
-        height: 2rem;
-        border: solid 3px grey;
-        border-radius: 50%;
-        background-color: white;
-        left:5%;
-        top: 50%;
-        margin-left: -1rem;
+      span {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          border: solid 3px grey;
+          border-radius: 50%;
+          background-color: white;
+          left: 5%;
+          bottom: 60%;
+          margin-left: -.5rem;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 2rem;
+          height: 2rem;
+          border: solid 3px grey;
+          border-radius: 50%;
+          background-color: white;
+          left: 5%;
+          top: 50%;
+          margin-left: -1rem;
+        }
       }
     }
   }
-}
 }
