@@ -1,13 +1,13 @@
 @include media-breakpoint-down(sm) {
-  .abs{
+  .abs {
     margin-top: 2.5rem;
   }
-  .bg-sm-white{
+  .bg-sm-white {
     background-color: rgba(255, 255, 255, .6);
     width: 7rem;
   }
 }
-.bg-white{
-  background-color: rgba(255, 255, 255, .9);;
+.bg-white {
+  background-color: rgba(255, 255, 255, .9);
   transition: background-color 400ms;
 }

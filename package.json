@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/Spence-S/spence-s.github.io.git"
   },
-  "keywords": ["github", "jekyll", "webpack"],
+  "keywords": [
+    "github",
+    "jekyll",
+    "webpack"
+  ],
   "author": "Spencer Snyder <sasnyde2@gmail.com> (https://spence-s.github.io)",
   "license": "ISC",
   "bugs": {
@@ -26,6 +30,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "particles.js": "^2.0.0",
+    "popper.js": "^1.12.2",
     "scrollreveal": "^3.3.6",
     "tether": "^1.4.0"
   },
