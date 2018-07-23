@@ -1,4 +1,4 @@
-let config = {
+const config = {
   particles: {
     number: { value: 15, density: { enable: false, value_area: 800 } },
     color: { value: '#1b1e34' },
@@ -27,7 +27,7 @@ let config = {
     },
     move: {
       enable: true,
-      speed: 5,
+      speed: 2,
       direction: 'none',
       random: false,
       straight: false,

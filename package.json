@@ -4,7 +4,7 @@
   "description": "Spencer's blog!",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"jekyll serve --watch\" \"npm run watchcss\" \"npm run watchjs\" ",
+    "start": "concurrently \"bundle exec jekyll serve --watch\" \"npm run watchcss\" \"npm run watchjs\" ",
     "watchcss": "gulp watchcss",
     "watchjs": "gulp watchjs"
   },
@@ -24,33 +24,33 @@
   },
   "homepage": "https://spence-s.github.io",
   "dependencies": {
-    "animate.css": "^3.5.2",
+    "animate.css": "^3.6.1",
     "barba.js": "^1.0.0",
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.1.2",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
     "particles.js": "^2.0.0",
-    "popper.js": "^1.12.2",
-    "scrollreveal": "^3.3.6",
-    "tether": "^1.4.0"
+    "popper.js": "^1.14.3",
+    "scrollreveal": "^3.4.0",
+    "tether": "^1.4.4"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
-    "babel-preset-env": "^1.6.0",
+    "autoprefixer": "^7.2.6",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "babelify": "^7.3.0",
-    "browserify": "^14.4.0",
-    "concurrently": "^3.5.0",
+    "browserify": "^14.5.0",
+    "concurrently": "^3.6.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-clean": "^0.3.2",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
-    "node-sass": "^4.5.3",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0"
+    "node-sass": "^4.9.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^1.1.2",
+    "watchify": "^3.11.0"
   }
 }

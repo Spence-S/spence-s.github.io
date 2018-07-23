@@ -1,13 +1,14 @@
-name: Spence-s
-permalink: /blog/:year/:month/:day/:title
-exclude: ['node_modules', 'sass', 'Gemfile', 'gulpfile.js', '*.lock', '*.json']
+name:                 Spence-s
+title:                Spence-s
+permalink:            /blog/:year/:month/:day/:title
+exclude:              ['node_modules', 'sass', 'Gemfile', 'gulpfile.js', '*.lock', '*.json']
 collections:
   projects:
-    output: true
-future: true
-markdown: kramdown
+    output:           true
+future:               true
+markdown:             kramdown
 kramdown:
-  input: GFM
+  input:              GFM
   syntax_highlighter: rouge
-highlighter: rouge
-github: [metadata]
+highlighter:          rouge
+github:               [metadata]

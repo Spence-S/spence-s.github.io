@@ -2,10 +2,12 @@
   height: 100vh;
   width: 100vw;
 }
+
 .marker {
   font-family: 'Permanent Marker', cursive;
 }
-/** About Box**/
+
+/** About Box **/
 .about-header {
   position: relative;
   padding-bottom: 1rem;
@@ -14,7 +16,7 @@
     top: 0;
     bottom: 0;
     position: absolute;
-    content: " ";
+    content: ' ';
     width: 3px;
     background-color: grey;
     left: 50%;
@@ -31,6 +33,7 @@
     bottom: 0;
   }
 }
+
 .about-header-item {
   position: relative;
   padding: 1.5rem;
@@ -38,7 +41,7 @@
   &:not(:first-child) {
     &::before {
       top: 0;
-      content: "";
+      content: '';
       position: absolute;
       width: 50%;
       left: 35%;
@@ -54,7 +57,7 @@
   // horizontal line in middle of screen
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     width: 3px;
     height: 110%;
     background-color: grey;
@@ -68,7 +71,7 @@
     // small grey circles
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 1rem;
       height: 1rem;
@@ -76,12 +79,13 @@
       border-radius: 50%;
       background-color: grey;
       left: 50%;
-      top: .5rem;
-      margin-left: -.5rem;
+      top: 0.5rem;
+      margin-left: -0.5rem;
     }
+
     span {
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         width: 1rem;
         height: 1rem;
@@ -90,11 +94,11 @@
         background-color: white;
         left: 50%;
         bottom: 60%;
-        margin-left: -.5rem;
+        margin-left: -0.5rem;
       }
       // large gray outlined circle
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         width: 2rem;
         height: 2rem;
@@ -110,17 +114,18 @@
 }
 
 @include media-breakpoint-down(sm) {
-  /** About Box**/
+  /** About Box **/
   .mobile-height {
     height: 100%;
   }
+
   .about-header {
     position: relative;
     padding-bottom: 1rem;
     overflow: visible;
     // horizontal line in middle of screen
     &::before {
-      content: " ";
+      content: ' ';
       top: 0;
       bottom: 0;
       position: absolute;
@@ -148,7 +153,7 @@
     &:not(:first-child) {
       &::before {
         top: 0;
-        content: "";
+        content: '';
         position: absolute;
         width: 50%;
         left: 5%;
@@ -166,20 +171,21 @@
       top: 0;
       bottom: 0;
       position: absolute;
-      content: "";
+      content: '';
       width: 3px;
       height: 110%;
       background-color: grey;
       left: 5%;
       margin-left: -1.5px;
     }
+
     .timeline-item {
       // set position and pad
       position: relative;
       // small grey circles
       &::before,
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         width: 1rem;
         height: 1rem;
@@ -188,11 +194,12 @@
         background-color: grey;
         left: 5%;
         bottom: -2rem;
-        margin-left: -.5rem;
+        margin-left: -0.5rem;
       }
+
       span {
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           width: 1rem;
           height: 1rem;
@@ -201,10 +208,11 @@
           background-color: white;
           left: 5%;
           bottom: 60%;
-          margin-left: -.5rem;
+          margin-left: -0.5rem;
         }
+
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           width: 2rem;
           height: 2rem;

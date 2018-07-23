@@ -5,7 +5,7 @@ title: Portfolio
 
 <div class="card-deck mt-5" >
   {% assign sorted = site.projects | sort:"order" %}
-  {% for project in sorted | sort:"order"  %}
+  {% for project in sorted  %}
   <!-- start card -->
     <div class="col-sm-12 col-md-6 col-lg-4 mt-5">
       <div class="card custom-card p-2">
